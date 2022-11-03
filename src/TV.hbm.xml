@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="kdk10_lab4">
+    <class name="Tv" table="tv">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="native"/>
+        </id>
+        
+        <many-to-one name="tvSpecifications" column="tvSpecificationsID" class="TvSpecifications" cascade="all"/>
+        <property name="name" column="name"/>
+        <property name="manufacturer" column="manufacturer"/>
+    </class>
+</hibernate-mapping>

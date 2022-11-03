@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="kdk10_lab4">
+    <class name="TvSpecifications" table="tv_specifications">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="native"/>
+        </id>
+        
+        <property name="resolution" column="resolution"/>
+        <property name="brightness" column="brightness"/>
+        <property name="contrast" column="contrast"/>
+    </class>
+</hibernate-mapping>
